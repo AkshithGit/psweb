@@ -2,7 +2,7 @@ FROM alpine
 
 LABEL maintainer="sakshithkumar@gmail.com"
 
-RUN apk add --update node.js nodejs-npm 
+RUN apk add --update nodejs nodejs-npm 
 #RUN=execute command and create layer or instruction then value---RUN creates a new layer
 #nodejs-npm=nodejs-node package manager
 
@@ -21,5 +21,5 @@ RUN npm install
 EXPOSE 8080
 #EXPOSE -- metadata
 
-ENTRYPOINT [ "node","./app.js"]
+ENTRYPOINT ["node", "./app.js"]
 #ENTRYPOINT=default app for image/container--- metadata
